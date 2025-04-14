@@ -15,7 +15,15 @@ body {
 
 header {
     width: 100vw;
-    padding: 10px;
+    ;
+}
+nav{
+    display: flex;
+    justify-content: space-around;
+    align-items:center ;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+background: #000;
+height: 8vh;
 }
 
 ul {
@@ -45,6 +53,11 @@ main {
     margin-top: 2%;
     padding: 15px;
     position: relative;
+}
+.logo{
+    font-size: 24%;
+    text-transform: uppercase;
+    letter-spacing: 4px;
 }
 
 .pokedex {

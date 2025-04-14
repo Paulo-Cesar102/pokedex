@@ -42,8 +42,8 @@ form.addEventListener('submit',(event)=>{
 })
 
 buttonPrev.addEventListener('click',()=>{
-if(searchPokemon>1){searchPokemon-=1
-    renderPokemon(searchPokemon)
+if(searchPokemon>1){
+    searchPokemon-=1
     renderPokemon(searchPokemon)}
 })
 
