@@ -1,88 +1,125 @@
-@import url('https://fonts.googleapis.com/css2?family=Oxanium:wght@300;400;500;600;700;800&display=swap'); 
+@import url('https://fonts.googleapis.com/css2?family=Oxanium:wght@300;400;500;600;700;800&display=swap');
 
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Oxanium',cursive;
+    font-family: 'Oxanium', cursive;
 }
 
-body{
-text-align: center;
-background: linear-gradient(to bottom,rgb(54, 124, 255),white);
-min-height: 100vh;
+body {
+    text-align: center;
+    background: linear-gradient(to bottom, rgb(54, 124, 255), white);
+    min-height: 100vh;
 }
-main{
+
+header {
+    width: 100vw;
+    padding: 10px;
+}
+
+ul {
+    display: flex;
+    width: 70%;
+    margin: auto;
+    padding: 10px;
+    justify-content: space-around;
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+    padding: 10px;
+    transition: 0.3s linear;
+}
+
+a:hover {
+    background-color: rgb(13, 57, 138);
+    padding: 10px;
+    border-radius: 5px;
+}
+
+main {
     display: inline-block;
     margin-top: 2%;
     padding: 15px;
     position: relative;
 }
-.pokedex{
+
+.pokedex {
     width: 100%;
     max-width: 425px;
 }
-.pokemon__image{
-    position:absolute;
-   bottom: 50%;
-   left:50%;
-transform: translate(-50%,0);
-height: 18%;
+
+.pokemon__image {
+    position: absolute;
+    bottom: 50%;
+    left: 50%;
+    transform: translate(-50%, 0);
+    height: 18%;
 }
-.pokemon__data{
+
+.pokemon__data {
     position: absolute;
     font-weight: 600;
-    color:#aaa;
-    top:54.5%;
+    color: #aaa;
+    top: 54.5%;
     right: 27%;
     font-size: clamp(8px, 5vw, 25px);
 }
-.pokemon__name{
+
+.pokemon__name {
     color: #3a444d;
     text-transform: capitalize;
 }
-.form{
+
+.form {
     position: absolute;
     background-color: red;
     width: 65%;
     top: 65%;
-    left:13.5%;
+    left: 13.5%;
 }
-.input__search{
-width: 100%;
-padding: 4%;
-outline: none;
-border: 2px solid #333;
-border-radius: 5px;
-font-weight: 600;
-color: #3a444d;
-font-size: clamp(8px, 5vw, 1rem) ;
-box-shadow: -3px 4px 0 #888, -5px 7px 0 #333 ;
+
+.input__search {
+    width: 100%;
+    padding: 4%;
+    outline: none;
+    border: 2px solid #333;
+    border-radius: 5px;
+    font-weight: 600;
+    color: #3a444d;
+    font-size: clamp(8px, 5vw, 1rem);
+    box-shadow: -3px 4px 0 #888, -5px 7px 0 #333;
 }
-.buttons{
+
+.buttons {
     padding-bottom: 25px;
     position: absolute;
     bottom: 10%;
     left: 50%;
     width: 65%;
-    transform: translate(-57%,0);
+    transform: translate(-57%, 0);
     display: flex;
     gap: 20px;
 }
-.button{
-    width:80%;
+
+.button {
+    width: 80%;
     padding-top: 8px;
     padding-bottom: 8px;
     border: 2px solid #000;
     border-radius: 5px;
     font-size: clap(5px, 5vw, 1rem);
     font-weight: 600;
-    color:white;
+    color: white;
     background-color: #444;
-    box-shadow: -3px 4px 0 #222, -5px 7px 0 #333 ;
+    box-shadow: -3px 4px 0 #222, -5px 7px 0 #333;
 }
-.button:active{
-   background-color: red;
-   box-shadow: inset -4px 4px 0 #222; 
-   font-size: 0.9rem;
+
+.button:active {
+    background-color: red;
+    box-shadow: inset -4px 4px 0 #222;
+    font-size: 0.9rem;
 }
