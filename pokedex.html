@@ -1,48 +1,50 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html> <!-- Declara que o documento é HTML5 -->
+<html lang="en"> <!-- Início do documento HTML, com atributo de idioma configurado para inglês (en) -->
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pokedex</title>
-    <link rel="icon" href="favicons/favicon-16x16.png">
-    <link rel="stylesheet" href="Css/estilo.css">
-    <script defer src="JS/script.js"></script>
+    <meta charset="UTF-8"> <!-- Define a codificação de caracteres como UTF-8 para garantir que todos os caracteres sejam exibidos corretamente -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Torna a página responsiva, adaptando o layout à largura da tela do dispositivo -->
+    <title>Pokedex</title> <!-- Define o título da página que aparece na aba do navegador -->
+    <link rel="icon" href="favicons/favicon-16x16.png"> <!-- Define o ícone da página que aparece na aba do navegador -->
+    <link rel="stylesheet" href="Css/estilo.css"> <!-- Vincula o arquivo CSS que contém a estilização da página -->
+    <script defer src="JS/script.js"></script> <!-- Vincula o arquivo JavaScript, e o "defer" garante que ele será carregado depois que o HTML for completamente carregado -->
 </head>
-<body>
-<header>
-    <nav>
-        <ul class="navBar">
-            <li><a href="index.html">Inicio</a></li>
-            <li><a href="sobre.html">Sobre</a></li>
-            <li><a href="">Pokedex</a></li>
-            <li><a href="">Treinadores</a></li>
-            <li><a href="">Jogos</a></li>
+<body> <!-- Início do corpo da página -->
+<header> <!-- Cabeçalho da página, geralmente contém a navegação principal -->
+    <nav> <!-- Elemento que envolve os links de navegação -->
+        <ul class="navBar"> <!-- Lista não ordenada que serve como menu de navegação -->
+            <li><a href="index.html">Inicio</a></li> <!-- Link para a página inicial -->
+            <li><a href="sobre.html">Sobre</a></li> <!-- Link para a página sobre -->
+            <li><a href="">Pokedex</a></li> <!-- Link para a Pokédex, sem URL definida ainda -->
+            <li><a href="">Treinadores</a></li> <!-- Link para a página de Treinadores -->
+            <li><a href="">Jogos</a></li> <!-- Link para a página de Jogos -->
         </ul>
-    
     </nav>
-
 </header>
-    <main>
-        <section>
-            <img src="" alt="Pokemon" class="pokemon__image">
-            <h1 class="pokemon__data">
-            <span class="pokemon__number"></span> -
-            <span class="pokemon__name"></span>
-                </h1>
-                <form class="form">
+
+<main> <!-- Início do conteúdo principal da página -->
+    <section> <!-- Seção onde será exibido o conteúdo principal da Pokédex -->
+        <img src="" alt="Pokemon" class="pokemon__image"> <!-- Imagem do Pokémon, inicialmente vazia -->
+        <h1 class="pokemon__data"> <!-- Cabeçalho com dados do Pokémon -->
+            <span class="pokemon__number"></span> - <!-- Exibe o número do Pokémon -->
+            <span class="pokemon__name"></span> <!-- Exibe o nome do Pokémon -->
+        </h1>
+
+        <form class="form"> <!-- Formulário de busca -->
             <input
             type="search"
             class="input__search"
             placeholder="Name or Number"
-            required
+            required 
             />
-                </form>
-                <div class="buttons">
-            <button class="button btn-prev">&gt;Prev&lt;</button>
-            <button class="button btn-next">&gt;Next&lt;</button>
-                </div>
-                <img src="imgs/pokedex.png" alt="pokedex" class="pokedex">
-        </section>
-    </main>
+        </form>
+
+        <div class="buttons"> <!-- Div que contém os botões de navegação -->
+            <button class="button btn-prev">&gt;Prev&lt;</button> <!-- Botão para o Pokémon anterior -->
+            <button class="button btn-next">&gt;Next&lt;</button> <!-- Botão para o próximo Pokémon -->
+        </div>
+        
+        <img src="imgs/pokedex.png" alt="pokedex" class="pokedex"> <!-- Imagem da Pokédex -->
+    </section>
+</main>
 </body>
 </html>

@@ -1,0 +1,169 @@
+
+@import url(...): importa a fonte personalizada Oxanium.
+
+* { ... }
+margin: 0; → Remove toda a margem externa padrão dos elementos.
+
+padding: 0; → Remove o espaçamento interno padrão.
+
+box-sizing: border-box; → Faz com que padding e border sejam incluídos no tamanho total do elemento.
+
+font-family: 'Oxanium', cursive; → Define a fonte principal da página.
+
+body { ... }
+text-align: center; → Centraliza o texto dentro do body.
+
+background: linear-gradient(to bottom, rgb(54, 124, 255), white); → Aplica um degradê vertical do azul até o branco.
+
+min-height: 100vh; → Faz com que o corpo tenha no mínimo a altura da tela.
+
+header { ... }
+width: 100vw; → Define largura total da viewport.
+
+padding: 10px; → Adiciona espaçamento interno.
+
+ul { ... }
+display: flex; → Coloca os itens da lista em linha (layout flexível).
+
+width: 70%; → Define largura de 70% da tela.
+
+margin: auto; → Centraliza horizontalmente.
+
+padding: 10px; → Espaçamento interno entre os itens.
+
+justify-content: space-around; → Distribui os itens com espaço igual entre eles.
+
+list-style: none; → Remove as bolinhas padrão da lista.
+
+a { ... }
+text-decoration: none; → Remove sublinhado dos links.
+
+color: white; → Define cor branca para o texto.
+
+padding: 10px; → Adiciona espaçamento interno.
+
+transition: 0.3s linear; → Anima mudanças (ex: hover) suavemente em 0.3s.
+
+a:hover { ... }
+background-color: rgb(13, 57, 138); → Muda o fundo ao passar o mouse.
+
+padding: 10px; → Mantém o mesmo padding.
+
+border-radius: 5px; → Arredonda os cantos.
+
+main { ... }
+display: inline-block; → Permite centralizar o main e ainda ajustar suas dimensões.
+
+margin-top: 2%; → Adiciona espaço acima.
+
+padding: 15px; → Espaço interno.
+
+position: relative; → Permite posicionar elementos filhos com absolute.
+
+.pokedex { ... }
+width: 100%; → Ocupa 100% do container.
+
+max-width: 425px; → Limita a largura máxima para 425px (fica responsivo).
+
+.pokemon__image { ... }
+position: absolute; → Permite posicionar a imagem sobre a pokédex.
+
+bottom: 50%; → Posiciona a imagem subindo da base.
+
+left: 50%; → Centraliza horizontalmente.
+
+transform: translate(-50%, 0); → Ajusta para centralizar corretamente.
+
+height: 18%; → Define a altura proporcional da imagem.
+
+.pokemon__data { ... }
+position: absolute; → Posiciona sobre a imagem.
+
+font-weight: 600; → Deixa o texto mais “forte”.
+
+color: #aaa; → Texto cinza claro.
+
+top: 54.5%; → Coloca o texto um pouco abaixo da imagem.
+
+right: 27%; → Empurra o texto da direita.
+
+font-size: clamp(8px, 5vw, 25px); → Fonte responsiva (mínimo 8px, máximo 25px).
+
+.pokemon__name { ... }
+color: #3a444d; → Cor escura pro nome.
+
+text-transform: capitalize; → Primeira letra de cada palavra em maiúscula.
+
+.form { ... }
+position: absolute; → Posiciona sobre a imagem/fundo.
+
+background-color: red; → Fundo vermelho pro campo de busca.
+
+width: 65%; → Largura proporcional.
+
+top: 65%; → Posiciona a barra abaixo da imagem.
+
+left: 13.5%; → Empurra da esquerda.
+
+.input__search { ... }
+width: 100%; → Ocupa todo o espaço do form.
+
+padding: 4%; → Espaçamento interno proporcional.
+
+outline: none; → Remove contorno padrão ao focar.
+
+border: 2px solid #333; → Borda escura.
+
+border-radius: 5px; → Cantos arredondados.
+
+font-weight: 600; → Fonte mais forte.
+
+color: #3a444d; → Cor do texto.
+
+font-size: clamp(8px, 5vw, 1rem); → Fonte responsiva.
+
+box-shadow: -3px 4px 0 #888, -5px 7px 0 #333; → Sombra dupla que dá efeito de profundidade.
+
+.buttons { ... }
+padding-bottom: 25px; → Espaço abaixo.
+
+position: absolute; → Posiciona na pokédex.
+
+bottom: 10%; → Fica perto do rodapé.
+
+left: 50%; → Centraliza horizontalmente.
+
+width: 65%; → Largura do bloco dos botões.
+
+transform: translate(-57%, 0); → Ajusta melhor a centralização.
+
+display: flex; → Coloca os botões lado a lado.
+
+gap: 20px; → Espaço entre os botões.
+
+.button { ... }
+width: 80%; → Cada botão ocupa 80% do espaço disponível.
+
+padding-top: 8px; padding-bottom: 8px; → Altura dos botões.
+
+border: 2px solid #000; → Borda preta.
+
+border-radius: 5px; → Cantos arredondados.
+
+font-size: clap(5px, 5vw, 1rem); → ⚠️ Erro de digitação: deveria ser clamp.
+
+font-weight: 600; → Texto mais forte.
+
+color: white; → Texto branco.
+
+background-color: #444; → Fundo cinza escuro.
+
+box-shadow: -3px 4px 0 #222, -5px 7px 0 #333; → Efeito de profundidade com sombra dupla.
+
+.button:active { ... }
+background-color: red; → Muda fundo para vermelho ao clicar.
+
+box-shadow: inset -4px 4px 0 #222; → Cria uma sombra interna (efeito de "afundado").
+
+font-size: 0.9rem; → Reduz um pouco o tamanho da fonte ao clicar.
+

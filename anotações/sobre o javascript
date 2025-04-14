@@ -1,0 +1,127 @@
+🧠 Explicando o código passo a passo (com conceitos)
+📌 1. Seletores do DOM
+Essas linhas pegam elementos do HTML pra gente poder trabalhar com eles no JavaScript:
+
+const pokemonName = document.querySelector('.pokemon__name');
+const pokemonNumber = document.querySelector('.pokemon__number');
+const pokemonImage = document.querySelector('.pokemon__image');
+const form = document.querySelector('.form');
+const input = document.querySelector('.input__search');
+const buttonPrev = document.querySelector('.btn-prev');
+const buttonNext = document.querySelector('.btn-next');
+document.querySelector('.classe'): Pega o elemento HTML com a classe indicada.
+
+const: Cria uma constante (uma variável que não muda).
+
+Esses elementos são usados pra mostrar/editar o conteúdo da pokédex na tela.
+
+🔢 2. Variável de controle
+
+let searchPokemon = 1;
+let: Cria uma variável que pode mudar.
+
+Essa aqui guarda o número do Pokémon atual que estamos vendo.
+
+🌐 3. Função para buscar o Pokémon
+
+const fetchPokemon = async (pokemon) => {
+  const APIResponse = await fetch(`https://pokeapi.co/api/v2/pokemon/${pokemon}`);
+
+  if (APIResponse.status === 200) {
+    const data = await APIResponse.json();
+    return data;
+  }
+}
+🔎 O que está rolando aqui?
+fetch(...): Faz uma requisição à internet (tipo "visitar um site").
+
+async: Significa que a função é assíncrona, ou seja, vai demorar um pouco (porque tá indo buscar dados online).
+
+await: Diz pro JS "espera essa parte terminar" antes de continuar.
+
+.json(): Converte os dados que vieram da API em JSON (explico abaixo 👇).
+
+❓ O que é JSON?
+JSON = JavaScript Object Notation
+
+É um formato leve de troca de dados, tipo uma forma organizada de guardar info em texto. Exemplo:
+
+json
+
+{
+  "name": "pikachu",
+  "id": 25
+}
+🎨 4. Função que mostra o Pokémon na tela
+
+const renderPokemon = async (pokemon) => {
+  pokemonName.innerHTML = 'Loading...';
+  pokemonNumber.innerHTML = '';
+
+  const data = await fetchPokemon(pokemon);
+
+  if (data) {
+    pokemonName.innerHTML = data.name;
+    pokemonNumber.innerHTML = data.id;
+    pokemonImage.src = data['sprites']['versions']['generation-v']['black-white']['animated']['front_default'];
+    input.value = '';
+    searchPokemon = data.id;
+  } else {
+    pokemonName.innerHTML = 'Not Found :c';
+    pokemonNumber.innerHTML = '';
+    pokemonImage.style.display = 'none';
+  }
+}
+🧩 Explicando:
+Mostra "Loading..." enquanto carrega.
+
+Chama fetchPokemon() e espera os dados.
+
+Se achar o Pokémon:
+
+Mostra o nome, número e imagem animada dele.
+
+Limpa o campo de busca.
+
+Atualiza a variável searchPokemon com o ID atual.
+
+Se não achar, mostra mensagem de erro e esconde a imagem.
+
+🎯 5. Envio do formulário de busca
+
+form.addEventListener('submit', (event) => {
+  event.preventDefault();
+  renderPokemon(input.value.toLowerCase());
+});
+.addEventListener('submit', ...): Escuta quando o form é enviado (tecla Enter).
+
+event.preventDefault(): Impede que a página recarregue.
+
+input.value.toLowerCase(): Pega o valor do input e transforma em minúsculas (pra evitar erros).
+
+Chama a função renderPokemon() com o valor digitado.
+
+⬅️➡️ 6. Botões de navegação
+
+buttonPrev.addEventListener('click', () => {
+  if (searchPokemon > 1) {
+    searchPokemon -= 1;
+    renderPokemon(searchPokemon);
+  }
+});
+
+buttonNext.addEventListener('click', () => {
+  searchPokemon += 1;
+  renderPokemon(searchPokemon);
+});
+Quando clica no botão de voltar, ele diminui 1 no searchPokemon e carrega o anterior.
+
+Quando clica em próximo, soma 1 e carrega o seguinte.
+
+Só deixa ir pra trás se o número for maior que 1 (porque não tem Pokémon com ID 0 ou negativo).
+
+🚀 7. Carrega o primeiro Pokémon
+
+renderPokemon(searchPokemon);
+Quando o site abre, ele mostra o primeiro Pokémon (ID 1, que é o Bulbasaur 🌱).
+
