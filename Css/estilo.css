@@ -35,7 +35,7 @@ nav{
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 background: #000;
 height: 8vh;
-width: 100%;
+width: 100vw;
 }
 .mobile-menu div{
 width: 32px;
