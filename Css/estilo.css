@@ -47,9 +47,6 @@ margin: 8px;
     cursor: pointer;
     
 }
-@media(max-width:999px){
-    .nav
-}
 
 ul {
     display: flex;
