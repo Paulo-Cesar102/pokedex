@@ -181,6 +181,16 @@ main {
     font-size: 0.9rem;
 }
 @media (max-width: 768px) {
+    nav{
+        display: flex;
+        justify-content: space-around;
+        align-items:center ;
+        font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    background: #000;
+    height: 8vh;
+    width: 100vw;
+    position: relative;}
+
     .navBar{
         background-color: rgba(0, 0, 0, 0.479);
         position: absolute;
@@ -204,4 +214,16 @@ main {
    nav{
 position: relative;
    } 
+   .mobile-menu div{
+    width: 32px;
+    height: 2px;
+    background:#fff;
+    margin: 8px;
+    }
+    .mobile-menu{
+        cursor: pointer;
+        position: absolute;
+        left: 0;
+        margin-left: 10px;
+    }
 }
