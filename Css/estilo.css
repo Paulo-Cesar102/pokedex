@@ -181,11 +181,25 @@ main {
     font-size: 0.9rem;
 }
 @media (max-width: 768px) {
-   .navBar{
-    display:none;
-    position: relative;
-    width: 100%;
-   }
+    .navBar{
+        background-color: rgba(0, 0, 0, 0.479);
+        position: absolute;
+        left: 0;
+        top: 0;
+        padding-top: 10vh;
+        text-align: left;
+        display: none;
+        flex-direction: column;
+        width: 50%;
+        height: 90vh;
+        z-index: 1;
+    }
+    .mobile-menu{
+        cursor: pointer;
+        z-index: 2;
+        margin-left: 10px;
+        left: 0;
+    }
    .mobile-menu{
     position: absolute;
     left: 0;
