@@ -200,11 +200,7 @@ main {
         margin-left: 10px;
         left: 0;
     }
-   .mobile-menu{
-    position: absolute;
-    left: 0;
-    margin-left: 10px;
-   }
+  
    nav{
 position: relative;
    } 
