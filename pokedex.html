@@ -12,12 +12,12 @@
 <header> <!-- Cabeçalho da página, geralmente contém a navegação principal -->
     <nav> <!-- Elemento que envolve os links de navegação -->
         <a class="Logo" href=""></a>
-        <div class="mobile-menu">
+       i <div class="mobile-menu" onclick="abrirMenu()">
         <div class="line1"></div>
         <div class="line2"></div>
         <div class="line3"></div>
     </div>
-        <ul class="navBar"> <!-- Lista não ordenada que serve como menu de navegação -->
+        <ul class="navBar" id="menu"> <!-- Lista não ordenada que serve como menu de navegação -->
             <li><a href="index.html">Inicio</a></li> <!-- Link para a página inicial -->
             <li><a href="sobre.html">Sobre</a></li> <!-- Link para a página sobre -->
             <li><a href="">Pokedex</a></li> <!-- Link para a Pokédex, sem URL definida ainda -->
@@ -53,5 +53,16 @@
         <img src="imgs/pokedex.png" alt="pokedex" class="pokedex"> <!-- Imagem da Pokédex -->
     </section>
 </main>
+<script>
+    let menu = document.getElementById('menu');
+
+function abrirMenu(){
+    if(menu.style.display === 'flex'){
+        menu.style.display = 'none';
+    } else {
+        menu.style.display = 'flex';
+    }
+}
+</script>
 </body>
 </html>
