@@ -20,13 +20,39 @@
         <ul class="navBar" id="menu"> <!-- Lista não ordenada que serve como menu de navegação -->
             <li><a href="index.html">Inicio</a></li> <!-- Link para a página inicial -->
             <li><a href="sobre.html">Sobre</a></li> <!-- Link para a página sobre -->
-            <li><a href="pokedex.html">Pokedex</a></li> <!-- Link para a Pokédex, sem URL definida ainda -->
+            <li><a href="">Pokedex</a></li> <!-- Link para a Pokédex, sem URL definida ainda -->
             <li><a href="">Treinadores</a></li> <!-- Link para a página de Treinadores -->
             <li><a href="">Jogos</a></li> <!-- Link para a página de Jogos -->
 
         </ul>
     </nav>
 </header>
+
+<main> <!-- Início do conteúdo principal da página -->
+    <section> <!-- Seção onde será exibido o conteúdo principal da Pokédex -->
+        <img src="" alt="Pokemon" class="pokemon__image"> <!-- Imagem do Pokémon, inicialmente vazia -->
+        <h1 class="pokemon__data"> <!-- Cabeçalho com dados do Pokémon -->
+            <span class="pokemon__number"></span> - <!-- Exibe o número do Pokémon -->
+            <span class="pokemon__name"></span> <!-- Exibe o nome do Pokémon -->
+        </h1>
+
+        <form class="form"> <!-- Formulário de busca -->
+            <input
+            type="search"
+            class="input__search"
+            placeholder="Name or Number"
+            required 
+            />
+        </form>
+
+        <div class="buttons"> <!-- Div que contém os botões de navegação -->
+            <button class="button btn-prev">&gt;Prev&lt;</button> <!-- Botão para o Pokémon anterior -->
+            <button class="button btn-next">&gt;Next&lt;</button> <!-- Botão para o próximo Pokémon -->
+        </div>
+        
+        <img src="imgs/pokedex.png" alt="pokedex" class="pokedex"> <!-- Imagem da Pokédex -->
+    </section>
+</main>
 <script>
     let menu = document.getElementById('menu');
 
